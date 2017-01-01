@@ -18,9 +18,8 @@ function strip(bandname){
 	return bandname.replace(/^(a |the |an )/i, '').trim()
 }
 
-plot = 'the plot in you'
+const sortedBands = bands.sort(function(a, b) {
+	return (strip(a) > strip(b)) ? 1 : -1;
+})
 
-
-let stripped = strip(plot)
-
-console.log( stripped )
+console.log( sortedBands )
