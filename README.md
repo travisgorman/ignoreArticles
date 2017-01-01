@@ -6,6 +6,26 @@ Doesn't do anything other than display the resulting list. As you see 'The Bled'
 
 ![screenshot](http://i.imgur.com/Z6QkxPJ.jpg)
 
+I've got this array of band names, and want them on the page, in a list, alphabetically, ignoring articles.
+
+```js
+const bands = [
+	'The Plot in You', 
+	'The Devil Wears Prada', 
+	'Pierce the Veil', 
+	'Norma Jean', 
+	'The Bled', 
+	'Say Anything', 
+	'The Midway State', 
+	'We Came as Romans', 
+	'Counterparts', 
+	'Oh, Sleeper', 
+	'A Skylit Drive', 
+	'Anywhere But Here', 
+	'An Old Dog'
+];
+```
+
 ## `String.replace()` and Regular Expressions
 `replace( x, y )` takes two arguements. `x` is the string pattern you want to replace, and `y` is what you want to replace instances of `x` with.  If you want to delete or ignore something, replace it with an empty string. 
 
