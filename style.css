@@ -9,7 +9,7 @@
 
 #bands {
   list-style: inside square;
-  font-size: 20px;
+  font-size: 16px;
   background: white;
   width: 500px;
   margin: auto;
@@ -19,7 +19,7 @@
 
 #bands li {
   border-bottom: 1px solid #efefef;
-  padding: 20px;
+  padding: 16px;
 }
 
 #bands li:last-child {

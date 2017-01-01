@@ -18,8 +18,9 @@ function strip(bandname){
 	return bandname.replace(/^(a |the |an )/i, '').trim()
 }
 
-const sortedBands = bands.sort(function(a, b) {
-	return (strip(a) > strip(b)) ? 1 : -1;
-})
+const sorted = bands.sort((a, b) => 
+	(strip(a) > strip(b)) ? 1 : -1)
 
-console.log( sortedBands )
+document.querySelector('#bands')
+	.innerHTML = sorted.map(band => `<li>${band}</li>`)
+			.join('')
