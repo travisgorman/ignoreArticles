@@ -14,3 +14,13 @@ const bands = [
 	'An Old Dog'
 ];
 
+function strip(bandname){
+	return bandname.replace(/^(a |the |an )/i, '').trim()
+}
+
+plot = 'the plot in you'
+
+
+let stripped = strip(plot)
+
+console.log( stripped )
