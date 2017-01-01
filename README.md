@@ -1,4 +1,4 @@
-#Sort Without Articles
+#[Sort Without Articles](http://travis.bingo/ignoreArticles/)
 Sort an array of band names alphabetically, ignoring articles ('a', 'an', 'the') and render into a list on the page.
 
 #Features
@@ -25,11 +25,20 @@ Returns a string with no whitespace on either end. In this case, I didn't see `t
 ```js
 const sorted = bands.sort((a, b) => (a > b) ? 1: -1)
 ```
-except we're putting `a` and `b` through our `strip()` function so it can compare the two, ignoring articles.
+except we're putting each of the array (string) elements `a` and `b` through our `strip()` function so it can compare the two, ignoring any articles.
 
 ```js
 const sorted = bands.sort((a, b) => (strip(a) > strip(b)) ? 1 : -1)
 ```
 
+We're not actually deleting the articles, we are just comparing the names with one another while ignoring them. When they are returned, sorted in the array, the names are still completely intact.
 
+## `Array.map()`
+To get the sorted array into a list on the page, grab the `<ul id="bands">` on `index.html` with `document.querySelector()` and set its `innerHTML` to a bunch of `<li>` list items, by mapping over the `sorted`array. For each `band` item, return a string list item with the `band` name interpolated. Finally, chain on a `join()` method to get rid of the trailing commas.
 
+1. `strip` function that removes articles with `replace` and regular expressions
+2. create a sorted version of the array using `sort` —  with `strip` inside the comparator function.
+3. `map` over the sorted array, setting `innerHTML` of the `<ul>` to list items 
+
+## How I Can Expand On This
+Learning more about regular expressions would be incredibly useful. 
